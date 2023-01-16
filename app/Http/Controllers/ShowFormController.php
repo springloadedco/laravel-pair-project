@@ -9,6 +9,8 @@ class ShowFormController extends Controller
 {
     public function __invoke()
     {
-        return Inertia::render('Form/Show');
+        return Inertia::render('Form/Show')->with([
+            'success' => session('success'),
+        ]);
     }
 }
